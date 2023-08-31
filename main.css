@@ -1,0 +1,135 @@
+/* To be used with all pages */
+
+@font-face {
+	font-family: "LibreFranklin";
+	font-style: normal;
+	src: url("./fonts/LibreFranklin-Regular.woff2")
+}
+
+@font-face {
+	font-family: "LibreFranklin";
+	font-style: bold;
+	src: url("./fonts/LibreFranklin-Bold.woff2")
+}
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	/* responsive font */
+	font-size: calc(60% + 0.8vmin);
+	font-family: "LibreFranklin";
+}
+
+/* navigation bar styling */
+#nav {
+	display: flex;
+	justify-content: space-between;
+	height: 5rem;
+	padding: 0.3rem 1rem;
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	background-color: #55a5e580;
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+}
+#nav > a,
+#nav > a:visited {
+	height: 100%;
+	transition-duration: 0.3s;
+}
+#nav > a:hover,
+#nav > a:focus,
+#nav > a:active {
+	-webkit-filter: drop-shadow(0.5rem 0.5rem 5px #00000080);
+	filter: drop-shadow(0.5rem 0.5rem 5px #00000080);
+}
+#nav > a > img {
+	height: 100%;
+}
+#nav > ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#nav > ul > li {
+	padding-left: 1rem;
+}
+#nav > ul > li > a,
+#nav > ul > li > a:visited {
+	color: #FFFFFFEE;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	font-size: 1.7rem;
+	padding: 0 0.5rem;
+	transition-duration: 0.3s;
+	text-decoration: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-radius: 0.5rem;
+}
+#nav > ul > li > a:hover,
+#nav > ul > li > a:focus,
+#nav > ul > li > a:active {
+	background-color: #00000030;
+}
+#nav > ul > .join > a,
+#nav > ul > .join > a:visited {
+	border: none;
+	border-radius: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #00000080;
+	padding: 0 1rem;
+}
+#nav > ul > .join > a:hover,
+#nav > ul > .join > a:focus,
+#nav > ul > .join > a:active {
+	border: none;
+	background-color: #40404080;
+}
+/* button and nav animation */
+.button::after,
+.button:visited::after,
+#nav > ul > li > a::after,
+#nav > ul > li > a:visited::after {
+	transition-duration: 0.3s;
+	content: '';
+	height: 0.2rem;
+	background-color: #FFFFFF00;
+	transform: translate3d(-100%, 0, 0);
+}
+.button:hover::after,
+.button:focus::after,
+.button:active::after,
+#nav > ul > li > a:hover::after,
+#nav > ul > li > a:focus::after,
+#nav > ul > li > a:active::after {
+	background-color: #FFFFFF80;
+	transform: translate3d(0, 0, 0);
+}
+
+/* button styling */
+.button,
+.button:visited {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	align-self: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	transition-duration: 0.3s;
+	color: #ffffff;
+	background-color: #666666A0;
+	text-decoration: none;
+}
+.button:hover,
+.button:focus,
+.button:active {
+	color: #ffffff;
+	background-color: #666666E0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./sanitize.css" as="style">
+		<link rel="stylesheet" href="./sanitize.css">
+		<link rel="preload" href="./main.css" as="style">
+		<link rel="stylesheet" href="./main.css">
+		<link rel="preload" href="./book.css" as="style">
+		<link rel="stylesheet" href="./book.css">
+		<script src="./fancybox.umd.js"></script>
+		<link rel="stylesheet" href="./fancybox.css">
+		<script src="./fancybox.options.js" defer></script>
+		<link rel="icon" href="./him.png">
+		<title>Kākāpo chalet</title>
+	</head>
+	<body>
+		<nav id="nav">
+			<a href="./"><img src="./images/Maunga_Club_white.png"></a>
+			<ul>
+				<li><a href="./kakapo.html">Kākāpo</a></li>
+				<li><a href="./pukeko.html">Pūkeko</a></li>
+				<li><a href="./kereru.html">Kererū</a></li>
+				<li class="join"><a href="./join.html">Join now</a></li>
+			</ul>
+		</nav>
+		<section id="book">
+			<div>
+				<h1 id="title">Book a chalet</h1>
+				<form id="form">
+					<!--
+						day mon to fri
+					-->
+					<label for="memberID">Member ID</label>
+					<input type="text" id="memberID" name="memberID" placeholder="Member ID">
+
+					<label for="numOfAdults">Number of Adults</label>
+					<input type="text" id="numOfAdults" name="numOfAdults" placeholder="Number of Adults">
+
+					<label for="numOfChildren">Number of Children</label>
+					<input type="text" id="numOfChildren" name="numOfChildren" placeholder="Number of Children">
+
+					<label for="date">Date</label>
+					<input type="date" id="date" name="date">
+
+					<label for="chalet">Chalet</label>
+					<select name="chalet" id="chalet">
+						<option value="" selected disabled>--Select a Chalet--</option>
+						<option value="kakapo">Kākāpo</option>
+						<option value="pukeko">Pūkeko</option>
+						<option value="kereru">Kererū</option>
+					</select>
+
+					<button class="book" type="submit">Book now</button>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>

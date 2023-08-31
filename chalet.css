@@ -1,0 +1,74 @@
+#chalet {
+	/* background image */
+	background-image: url("./images/mountain_view_dark.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	min-height: 100%;
+}
+
+#chalet > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-grow: 1;
+	/* background image blur */
+	backdrop-filter: blur(3px);
+	padding: 2rem 0;
+	color: #ffffff;
+}
+
+#title {
+	font-size: 4rem;
+}
+
+#info {
+	background-color: #00000080;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+#info > ul {
+	font-size: 1.6rem;
+	padding-left: 30px;
+}
+
+#gallery {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 2rem;
+	width: 100%;
+	margin: 1rem 0;
+	max-width: 60rem;
+}
+#gallery > h1 {
+	font-size: 3rem;
+}
+#gallery > div {
+	font-size: 0px;
+	display: flex;
+	/*
+	flex-wrap: wrap;
+	*/
+	justify-content: space-evenly;
+	gap: 2rem;
+}
+/* wrap images when screen is smaller than 58rem */
+@media screen and (max-width: 58rem) {
+	#gallery > div {
+		flex-wrap: wrap;
+	}
+}
+#gallery > div > a {
+	max-width: 20rem;
+}
+#gallery > div > a > img {
+	width: 100%;
+}
+
+.button,
+.button:visited {
+	font-size: 1.6rem;
+}

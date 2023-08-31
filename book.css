@@ -1,0 +1,70 @@
+#book {
+	/* background image */
+	background-image: url("./images/mountain_view_dark.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	min-height: 100%;
+}
+
+#book > div {
+	flex-grow: 1;
+	/* background image blur */
+	backdrop-filter: blur(3px);
+	padding: 2rem;
+	color: #ffffff;
+}
+
+#title {
+	font-size: 4rem;
+	text-align: center;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	background-color: #00000080;
+	border-radius: 1rem;
+	padding: 4rem;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+#form > label {
+	text-align: center;
+	font-size: 1.5rem;
+}
+#memberID,
+#numOfAdults,
+#numOfChildren,
+#date,
+#chalet {
+	/* create more space between each input */
+	margin-bottom: 1.5rem;
+	font-size: 1.4rem;
+}
+/* button styling */
+.book,
+.book:visited {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	align-self: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	transition-duration: 0.3s;
+	color: #ffffff;
+	background-color: #666666A0;
+	text-decoration: none;
+	width: 100%;
+	margin-top: 2rem;
+	font-size: 1.4rem;
+	border: none;
+}
+.book:hover,
+.book:focus,
+.book:active {
+	color: #ffffff;
+	background-color: #666666E0;
+	cursor: pointer;
+}

@@ -1,0 +1,110 @@
+#hero {
+	/* background image */
+	background-image: url("./images/mountain_view_light.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	/* height extended for blur transition */
+	height: 120%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* use different image for aesthetics */
+@media screen and (max-width: 70rem) {
+	#hero {
+		background-image: url("./images/mountain_view_1.jpg");
+	}
+}
+
+#heroImg {
+	width: 80%;
+}
+
+#info {
+	background-image: url("./images/maunga_club_cabin.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	min-height: 100%;
+	/* blur transition */
+	position: relative;
+	top: -20vh;
+	margin-bottom: -20vh;
+	-webkit-mask-image: linear-gradient(to bottom, #0000 0, #000 20vh);
+	mask-image: linear-gradient(to bottom, #0000 0, #000 20vh);
+}
+#info > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+	flex-grow: 1;
+	color: #FFFFFF;
+	padding: 2rem;
+	padding-top: 7rem;
+}
+
+#info > div > h1 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	text-align: center;
+	font-size: 4rem;
+}
+
+#maungaClubInfo {
+	background-color: #00000080;
+	border-radius: 0.5rem;
+	max-width: 40rem;
+	font-size: 1.2rem;
+	padding: 1rem;
+}
+#maungaClubInfo > ul{
+	padding-left: 30px;
+}
+
+#chaletInfo {
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 60rem;
+}
+
+/* Arange chalet cards in a column when page is less than 58 rem */
+@media screen and (max-width: 58rem) {
+	#chaletInfo {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.chalet {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: 1rem;
+	max-width: 20rem;
+	flex: 1 1 15rem;
+	min-width: 16rem;
+	padding: 1rem;
+	font-size: 1.2rem;
+	background-color: #00000080;
+	border-radius: 0.5rem;
+}
+
+.chalet > h1 {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.chalet > ul {
+	padding-left: 30px;
+}
+.button {
+	margin-bottom: 2rem;
+}
